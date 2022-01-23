@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">JustNotes</string>
+    <string name="verison">JustNotes v0.0.2</string>
+    <string name="example1">Ваша первая заметка</string>
+    <string name="example2">Нажмите на кнопку выше...</string>
+</resources>
