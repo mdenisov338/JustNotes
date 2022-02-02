@@ -58,15 +58,19 @@ class MainActivity : AppCompatActivity() {
     private fun loadData(){
         val thisnote = findViewById<EditText>(R.id.thisnote)
         val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
-        val savedString = sharedPreferences.getString("STRING_KEY", null)
+        if(sharedPreferences.contains("STRING_KEY")) {
+            val savedString = sharedPreferences.getString("STRING_KEY", null)
 
-        thisnote.text = Editable.Factory.getInstance().newEditable(savedString)
+            thisnote.text = Editable.Factory.getInstance().newEditable(savedString)
+        } else {
 
+        }
     }
 
 
 
     override fun onBackPressed(){
+        saveData()
         finish()
     }
 }
