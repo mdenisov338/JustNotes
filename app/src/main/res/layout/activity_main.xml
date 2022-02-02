@@ -49,16 +49,20 @@
                     android:orientation="vertical"
                     android:layout_height="wrap_content">
 
-                    <EditText
-                        android:id="@+id/thisnote"
+
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:layout_margin="10dp"
-                        android:gravity="start|top"
-                        android:hint="Добро пожаловать! Начните свой ввод здесь..."
-                        android:textSize="22dp"
-                        android:inputType="textMultiLine" />
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:id="@+id/thisnote"
+                            android:layout_height="wrap_content"
+                            android:hint="Ваша заметка"
+                            />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
 
 
 
@@ -100,7 +104,6 @@
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
