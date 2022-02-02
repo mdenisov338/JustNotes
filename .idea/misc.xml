@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/android/JustNotes/app/src/main/res/drawable/buttons.xml" value="0.3828125" />
-        <entry key="..\:/android/JustNotes/app/src/main/res/layout/activity_editor.xml" value="0.182518115942029" />
+        <entry key="..\:/android/JustNotes/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.3828125" />
+        <entry key="..\:/android/JustNotes/app/src/main/res/drawable/textedit.xml" value="0.3828125" />
+        <entry key="..\:/android/JustNotes/app/src/main/res/layout/activity_editor.xml" value="0.2" />
         <entry key="..\:/android/JustNotes/app/src/main/res/layout/activity_main.xml" value="0.21784420289855072" />
         <entry key="..\:/android/JustNotes/app/src/main/res/layout/activity_note_editor.xml" value="0.36666666666666664" />
         <entry key="..\:/android/JustNotes/app/src/main/res/layout/add_note_menu.xml" value="0.36666666666666664" />

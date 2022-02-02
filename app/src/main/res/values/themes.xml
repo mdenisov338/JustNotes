@@ -17,10 +17,11 @@
         </item>
 
         <!-- Optional, if your app is drawing behind the status bar also. -->
-        <item name="android:statusBarColor">
+        <!--<item name="android:statusBarColor">
             @android:color/transparent
-        </item>
+        </item>-->
     </style>
+
     <style name="MyCardViewStyle" parent="Theme.AppCompat.Light">
         <item name="cardCornerRadius">2dp</item>
         <item name="cardElevation">2dp</item>
@@ -31,4 +32,13 @@
         <item name="contentPaddingRight">16dp</item>
         <item name="cardBackgroundColor">#7fb0f0</item>
     </style>
+
+    <style name="Theme.JustNotes.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.JustNotes.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.JustNotes.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
