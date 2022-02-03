@@ -14,7 +14,7 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="about">Добро пожаловать в приложение JustNotes!</string>
     <string name="about2">Приложение создано для быстрого, удобного редактирования текста.</string>
-    <string name="changes">Список изменений:\n1. Изменено поле ввода</string>
+    <string name="changes">Список изменений:\n1. Изменено поле ввода\n2.Исправлена проблема наложения клавиатуры.\n3.Прочие исправления и изменения дизайна.</string>
     <string name="vk">Группа ВК</string>
     <string name="tg">Канал Телеграм</string>
     <string name="gh">Исходный код</string>

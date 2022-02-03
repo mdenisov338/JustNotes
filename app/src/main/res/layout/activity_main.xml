@@ -95,15 +95,18 @@
                 android:layout_gravity="bottom|end"
                 app:borderWidth="0dp"
                 app:fabCustomSize="65dp"
-                app:maxImageSize="28dp"
+                app:maxImageSize="40dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="100dp"
-                app:srcCompat="@android:drawable/ic_menu_save" />
+                android:src="@drawable/save" />
 
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     </LinearLayout>
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

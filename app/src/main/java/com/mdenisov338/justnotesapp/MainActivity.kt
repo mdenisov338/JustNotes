@@ -2,12 +2,15 @@ package com.mdenisov338.justnotesapp
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.view.View
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.WindowCompat
 
 class MainActivity : AppCompatActivity() {
@@ -33,7 +36,9 @@ class MainActivity : AppCompatActivity() {
             saveData()
 
         }
-
+        val textView = findViewById<TextView>(R.id.textView)
+        val myCustomFont : Typeface? = ResourcesCompat.getFont(this, R.font.monty)
+        textView.typeface = myCustomFont
 
     }
 

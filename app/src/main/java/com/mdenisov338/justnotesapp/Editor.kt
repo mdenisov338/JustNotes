@@ -5,14 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.view.WindowCompat
 import android.R
+import android.graphics.Typeface
 import android.net.Uri
 import android.view.View
+import android.widget.Button
+import android.widget.TextView
+import androidx.core.content.res.ResourcesCompat
 
-import android.widget.EditText
-import java.io.File
-import java.io.FileWriter
-import java.io.IOException
-import java.lang.StringBuilder
 
 
 class Editor : AppCompatActivity() {
@@ -20,6 +19,28 @@ class Editor : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(com.mdenisov338.justnotesapp.R.layout.activity_editor)
         WindowCompat.setDecorFitsSystemWindows(window, false)
+
+        val textView = findViewById<TextView>(com.mdenisov338.justnotesapp.R.id.textView)
+        val myCustomFont : Typeface? = ResourcesCompat.getFont(this, com.mdenisov338.justnotesapp.R.font.monty)
+        textView.typeface = myCustomFont
+
+        val textView2 = findViewById<TextView>(com.mdenisov338.justnotesapp.R.id.textView2)
+        val textView3 = findViewById<TextView>(com.mdenisov338.justnotesapp.R.id.textView3)
+        val textView4 = findViewById<TextView>(com.mdenisov338.justnotesapp.R.id.textView4)
+        val textView5 = findViewById<TextView>(com.mdenisov338.justnotesapp.R.id.textView5)
+        textView2.typeface = myCustomFont
+        textView3.typeface = myCustomFont
+        textView4.typeface = myCustomFont
+        textView5.typeface = myCustomFont
+
+        val btn = findViewById<Button>(com.mdenisov338.justnotesapp.R.id.button4)
+        val btn2 = findViewById<Button>(com.mdenisov338.justnotesapp.R.id.button6)
+        val btn3 = findViewById<Button>(com.mdenisov338.justnotesapp.R.id.button7)
+        val btn4 = findViewById<Button>(com.mdenisov338.justnotesapp.R.id.button8)
+        btn.typeface = myCustomFont
+        btn2.typeface = myCustomFont
+        btn3.typeface = myCustomFont
+        btn4.typeface = myCustomFont
     }
 
     fun exisave(view: View) {
