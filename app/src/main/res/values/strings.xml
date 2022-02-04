@@ -1,23 +1,13 @@
 <resources>
     <string name="app_name">JustNotes</string>
-    <string name="verison">Текущая версия: v1.1</string>
-    <string name="example1">Ваша первая заметка</string>
-    <string name="example2">Нажмите на кнопку выше...</string>
-    <string name="title_activity_main2">MainActivity2</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="verison">Текущая версия: v1.3</string>
     <string name="about">Добро пожаловать в приложение JustNotes!</string>
     <string name="about2">Приложение создано для быстрого, удобного редактирования текста.</string>
-    <string name="changes">Список изменений:\n1. Изменено поле ввода\n2.Исправлена проблема наложения клавиатуры.\n3.Прочие исправления и изменения дизайна.</string>
+    <string name="changes">Список изменений:\n1. Новый дизайн M3\n2. Новая иконка\3.Оптимизация</string>
     <string name="vk">Группа ВК</string>
     <string name="tg">Канал Телеграм</string>
     <string name="gh">Исходный код</string>
     <string name="site">Сайт</string>
     <string name="back">Назад</string>
+    <string name="inf">Информация</string>
 </resources>

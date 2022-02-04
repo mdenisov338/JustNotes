@@ -4,14 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.view.WindowCompat
-import android.R
 import android.graphics.Typeface
 import android.net.Uri
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat
-
+import com.google.android.material.color.DynamicColors
 
 
 class Editor : AppCompatActivity() {
@@ -19,6 +18,7 @@ class Editor : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(com.mdenisov338.justnotesapp.R.layout.activity_editor)
         WindowCompat.setDecorFitsSystemWindows(window, false)
+        DynamicColors.applyIfAvailable(this, R.style.AppTheme_Overlay)
 
         val textView = findViewById<TextView>(com.mdenisov338.justnotesapp.R.id.textView)
         val myCustomFont : Typeface? = ResourcesCompat.getFont(this, com.mdenisov338.justnotesapp.R.font.monty)

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -18,7 +17,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="#7fb0f0"
+        android:background="?colorPrimary"
         android:gravity="bottom"
         android:orientation="vertical">
 
@@ -27,9 +26,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="bottom|center_horizontal"
-        android:text="Информация"
+        android:text="@string/inf"
         android:font="@font/monty"
-        android:textColor="@color/white"
+        android:textColor="?colorOnPrimary"
         android:textSize="40sp"
          />
 
@@ -38,6 +37,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
+            android:background="?colorSecondaryContainer"
             android:layout_height="match_parent">
 
             <ScrollView
@@ -46,17 +46,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:font="@font/monty"
                 android:text="@string/about" />
 
             <Space
@@ -68,31 +66,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:textSize="25dp"
-                android:font="@font/monty"
+                android:textSize="25sp"
                 android:text="@string/about2" />
 
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="15dp" />
+                android:layout_height="10dp" />
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:layout_margin="5dp"
-                android:font="@font/monty"
-                android:textStyle="bold"
                 android:text="@string/verison" />
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:textSize="25dp"
-                android:font="@font/monty"
+                android:textSize="25sp"
                 android:text="@string/changes" />
 
             <Button
@@ -102,7 +96,6 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="5dp"
                 android:onClick="vk_a"
-                android:font="@font/monty"
                 android:background="@drawable/buttons"
                 android:text="@string/vk" />
 
@@ -113,7 +106,6 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="5dp"
                 android:onClick="gh_a"
-                android:font="@font/monty"
                 android:background="@drawable/buttons"
                 android:text="@string/gh" />
 
@@ -124,7 +116,6 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="5dp"
                 android:onClick="site_a"
-                android:font="@font/monty"
                 android:background="@drawable/buttons"
                 android:text="@string/site" />
 
@@ -139,8 +130,6 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="5dp"
                 android:onClick="exisave"
-                android:textStyle="bold"
-                android:font="@font/monty"
                 android:background="@drawable/buttons"
                 android:text="@string/back" />
 
