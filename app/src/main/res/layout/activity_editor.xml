@@ -131,6 +131,7 @@
                 android:layout_marginTop="5dp"
                 android:onClick="exisave"
                 android:background="@drawable/buttons"
+                android:textColor="@color/md_theme_light_errorContainer"
                 android:text="@string/back" />
 
 

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">JustNotes</string>
-    <string name="verison">Текущая версия: v1.3</string>
+    <string name="verison">Текущая версия: v1.3.1</string>
     <string name="about">Добро пожаловать в приложение JustNotes!</string>
     <string name="about2">Приложение создано для быстрого, удобного редактирования текста.</string>
     <string name="changes">Список изменений:\n1. Новый дизайн M3 \n2. Новая иконка \n3. Оптимизация</string>
@@ -10,4 +10,7 @@
     <string name="site">Сайт</string>
     <string name="back">Назад</string>
     <string name="inf">Информация</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
 </resources>

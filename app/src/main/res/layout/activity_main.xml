@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -104,15 +105,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
-                android:backgroundTint="?colorPrimary"
-                android:background="?colorAccent"
+                android:background="?colorPrimary"
                 android:layout_gravity="bottom|end"
                 app:borderWidth="0dp"
                 app:fabCustomSize="65dp"
-                app:maxImageSize="28dp"
+                app:maxImageSize="35dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
-                app:srcCompat="@android:drawable/ic_dialog_info" />
+                app:srcCompat="@drawable/info" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab2"
@@ -121,21 +121,18 @@
                 android:layout_gravity="bottom|end"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="100dp"
-                android:background="?colorAccent"
-                android:backgroundTint="?colorPrimary"
+                android:background="?colorTertiary"
                 android:clickable="true"
                 android:src="@drawable/save"
                 app:borderWidth="0dp"
                 app:fabCustomSize="65dp"
-                app:maxImageSize="40dp"
+                app:maxImageSize="35dp"
                 tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     </LinearLayout>
-
-
 
 
 

@@ -18,7 +18,6 @@ class Editor : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(com.mdenisov338.justnotesapp.R.layout.activity_editor)
         WindowCompat.setDecorFitsSystemWindows(window, false)
-        DynamicColors.applyIfAvailable(this, R.style.AppTheme_Overlay)
 
         val textView = findViewById<TextView>(com.mdenisov338.justnotesapp.R.id.textView)
         val myCustomFont : Typeface? = ResourcesCompat.getFont(this, com.mdenisov338.justnotesapp.R.font.monty)

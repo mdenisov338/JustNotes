@@ -1,5 +1,6 @@
 package com.mdenisov338.justnotesapp
 
+import android.app.Application
 import android.content.Context
 import android.content.Intent
 import android.graphics.Typeface
@@ -21,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         WindowCompat.setDecorFitsSystemWindows(window, false)
-        DynamicColors.applyIfAvailable(this, R.style.AppTheme_Overlay)
 
         loadData()
 
@@ -121,4 +121,7 @@ class MainActivity : AppCompatActivity() {
         saveData()
         finish()
     }
+
+
 }
+
