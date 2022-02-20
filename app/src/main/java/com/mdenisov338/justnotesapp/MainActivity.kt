@@ -1,21 +1,20 @@
 package com.mdenisov338.justnotesapp
 
-import android.app.Application
 import android.content.Context
 import android.content.Intent
 import android.graphics.Typeface
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import android.view.ViewTreeObserver.OnScrollChangedListener
 import android.widget.EditText
+import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.WindowCompat
-import com.google.android.material.color.DynamicColors
-
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,9 +43,23 @@ class MainActivity : AppCompatActivity() {
         val myCustomFont : Typeface? = ResourcesCompat.getFont(this, R.font.monty)
         textView.typeface = myCustomFont
 
+        var oldScrollYPostion = 0
+
         val counter = findViewById<TextView>(R.id.counter)
         val thisnote = findViewById<EditText>(R.id.thisnote)
         val time = findViewById<TextView>(R.id.counter2)
+        val scrollView = findViewById<ScrollView>(R.id.scrollview)
+
+        scrollView.viewTreeObserver.addOnScrollChangedListener(OnScrollChangedListener {
+            if (scrollView.scrollY > oldScrollYPostion) {
+                fab.visibility = View.GONE
+                fab2.visibility = View.GONE
+            } else if (scrollView.scrollY < oldScrollYPostion || scrollView.scrollY <= 0) {
+                fab.visibility = View.VISIBLE
+                fab2.visibility = View.VISIBLE
+            }
+            oldScrollYPostion = scrollView.scrollY
+        })
 
 
         thisnote.addTextChangedListener(object: TextWatcher {
@@ -87,7 +100,7 @@ class MainActivity : AppCompatActivity() {
 
         val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
-        editor.apply(){
+        editor.apply {
             putString("STRING_KEY", note)
             putString("STRING_NUM", count)
             putString("STRING_TIME", exptim)

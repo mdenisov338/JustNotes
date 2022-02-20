@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">JustNotes</string>
-    <string name="verison">Текущая версия: v1.3.1</string>
+    <string name="verison">Текущая версия: v1.3.2</string>
     <string name="about">Добро пожаловать в приложение JustNotes!</string>
     <string name="about2">Приложение создано для быстрого, удобного редактирования текста.</string>
-    <string name="changes">Список изменений:\n1. Новый дизайн M3 \n2. Новая иконка \n3. Оптимизация</string>
+    <string name="changes">Список изменений:\n1. Новый дизайн M3 \n2. Новая иконка \n3. Оптимизация\n4. Теперь кнопки скрываются для удобного написания текста.</string>
     <string name="vk">Группа ВК</string>
     <string name="tg">Канал Телеграм</string>
     <string name="gh">Исходный код</string>
