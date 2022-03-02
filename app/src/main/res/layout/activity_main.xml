@@ -46,14 +46,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="15dp"
                     android:textColor="?colorOnPrimary"
-                    android:text="Счетчик символов" />
+                    android:text="@string/count1" />
 
                 <TextView
                     android:id="@+id/counter2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="?colorOnPrimary"
-                    android:text="Время чтения" />
+                    android:text="@string/count2" />
 
             </LinearLayout>
 
@@ -89,7 +89,7 @@
                             android:id="@+id/thisnote"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Ваша заметка"
+                            android:hint="@string/hint"
                             tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
 
@@ -112,7 +112,7 @@
                 app:fabCustomSize="65dp"
                 app:maxImageSize="35dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="30dp"
                 app:srcCompat="@drawable/info" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -121,7 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
                 android:layout_marginEnd="20dp"
-                android:layout_marginBottom="100dp"
+                android:layout_marginBottom="110dp"
                 android:background="?colorTertiary"
                 android:clickable="true"
                 android:src="@drawable/save"

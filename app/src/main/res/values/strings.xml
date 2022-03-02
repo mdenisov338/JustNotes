@@ -1,16 +1,17 @@
 <resources>
     <string name="app_name">JustNotes</string>
-    <string name="verison">Текущая версия: v1.3.2</string>
-    <string name="about">Добро пожаловать в приложение JustNotes!</string>
-    <string name="about2">Приложение создано для быстрого, удобного редактирования текста.</string>
-    <string name="changes">Список изменений:\n1. Новый дизайн M3 \n2. Новая иконка \n3. Оптимизация\n4. Теперь кнопки скрываются для удобного написания текста.</string>
-    <string name="vk">Группа ВК</string>
-    <string name="tg">Канал Телеграм</string>
-    <string name="gh">Исходный код</string>
-    <string name="site">Сайт</string>
-    <string name="back">Назад</string>
-    <string name="inf">Информация</string>
-    <string name="appwidget_text">EXAMPLE</string>
-    <string name="add_widget">Add widget</string>
-    <string name="app_widget_description">This is an app widget description</string>
+    <string name="about">Welcome to JustNotes!</string>
+    <string name="about2">This app created for fast and comfortable text editing.</string>
+    <string name="changes">Changelog:\n1. New design M3\n2 . New icon \n3. Optimization\n4. Buttons are now hidden for easy text writing.\n5. The application is translated into English.</string>
+    <string name="vk">VK group</string>
+    <string name="gh">Github</string>
+    <string name="back">Back</string>
+    <string name="inf">Information</string>
+    <string name="site">Site</string>
+    <string name="verison">Version: 1.3.2</string>
+    <string name="count1">Character counter</string>
+    <string name="count2">Reading time</string>
+    <string name="minuts">mins</string>
+    <string name="hint">Start write here...</string>
+    <string name="tg">Telegram Group</string>
 </resources>

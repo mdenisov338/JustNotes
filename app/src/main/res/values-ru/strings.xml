@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">JustNotes</string>
+    <string name="verison">Текущая версия: v1.3.2</string>
+    <string name="about">Добро пожаловать в приложение JustNotes!</string>
+    <string name="about2">Приложение создано для быстрого, удобного редактирования текста.</string>
+    <string name="changes">Список изменений:\n1. Новый дизайн M3 \n2. Новая иконка \n3. Оптимизация\n4. Теперь кнопки скрываются для удобного написания текста.\n5. Приложение переведено на английский язык.</string>
+    <string name="vk">Группа ВК</string>
+    <string name="tg">Канал Телеграм</string>
+    <string name="gh">Исходный код</string>
+    <string name="site">Сайт</string>
+    <string name="back">Назад</string>
+    <string name="inf">Информация</string>
+    <string name="count1">Счетчик символов</string>
+    <string name="count2">Время чтения</string>
+    <string name="minuts">мин.</string>
+    <string name="hint">Начните писать здесь...</string>
+</resources>

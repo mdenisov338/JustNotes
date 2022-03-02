@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import android.view.ViewGroup
 import android.view.ViewTreeObserver.OnScrollChangedListener
 import android.widget.EditText
 import android.widget.ScrollView
@@ -14,7 +15,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
+import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updateLayoutParams
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,26 +65,30 @@ class MainActivity : AppCompatActivity() {
             oldScrollYPostion = scrollView.scrollY
         })
 
+        val count1: String = getString(R.string.count1)
+        val count2: String = getString(R.string.count2)
+        val minuts: String = getString(R.string.minuts)
+
 
         thisnote.addTextChangedListener(object: TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?,
                                            p1: Int, p2: Int, p3: Int) {
-                counter.text = "Счетчик символов: ${p0?.toString()?.length}"
+                counter.text = "${count1}: ${p0?.toString()?.length}"
                 val exptime = p1/536
-                time.text = "Время чтения: ~${exptime} мин."
+                time.text = "${count2}: ~${exptime} ${minuts}"
 
             }
 
             override fun onTextChanged(p0: CharSequence?,
                                        p1: Int, p2: Int, p3: Int) {
                 // count number of inputted characters in edit text
-                counter.text = "Счетчик символов: ${p0?.toString()?.length}"
+                counter.text = "${count1}: ${p0?.toString()?.length}"
                 val exptime = p1/536
-                time.text = "Время чтения: ~${exptime} мин."
+                time.text = "${count2}: ~${exptime} ${minuts}"
             }
 
             override fun afterTextChanged(p0: Editable?) {
-                counter.text = "Счетчик символов: ${p0?.toString()?.length}"
+                counter.text = "${count1}: ${p0?.toString()?.length}"
             }
         })
 
