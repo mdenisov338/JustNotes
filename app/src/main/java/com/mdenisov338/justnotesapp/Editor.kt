@@ -36,10 +36,12 @@ class Editor : AppCompatActivity() {
         val btn2 = findViewById<Button>(com.mdenisov338.justnotesapp.R.id.button6)
         val btn3 = findViewById<Button>(com.mdenisov338.justnotesapp.R.id.button7)
         val btn4 = findViewById<Button>(com.mdenisov338.justnotesapp.R.id.button8)
+        val btn5 = findViewById<Button>(com.mdenisov338.justnotesapp.R.id.button9)
         btn.typeface = myCustomFont
         btn2.typeface = myCustomFont
         btn3.typeface = myCustomFont
         btn4.typeface = myCustomFont
+        btn5.typeface = myCustomFont
     }
 
     fun exisave(view: View) {
