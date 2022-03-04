@@ -2,7 +2,7 @@
     <string name="app_name">JustNotes</string>
     <string name="about">Welcome to JustNotes!</string>
     <string name="about2">This app created for fast and comfortable text editing.</string>
-    <string name="changes">Changelog:\n1. New design M3\n2 . New icon \n3. Optimization\n4. Buttons are now hidden for easy text writing.\n5. The application is translated into English.</string>
+    <string name="changes">Changelog: 1. Buttons are now hidden for easy text writing. 2. The application is translated into English.</string>
     <string name="vk">VK group</string>
     <string name="gh">Github</string>
     <string name="back">Back</string>
