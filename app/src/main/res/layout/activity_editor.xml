@@ -73,7 +73,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="10dp" />
+                android:layout_height="5sp" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -129,6 +129,16 @@
                 android:onClick="tg_a"
                 android:background="@drawable/buttons"
                 android:text="@string/tg" />
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:onClick="ratestore"
+                android:background="@drawable/buttons"
+                android:text="@string/rate" />
 
             <Space
                 android:layout_width="match_parent"

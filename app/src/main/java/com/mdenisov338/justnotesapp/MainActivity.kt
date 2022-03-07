@@ -1,5 +1,8 @@
 package com.mdenisov338.justnotesapp
 
+
+import android.appwidget.AppWidgetManager
+import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.graphics.Typeface
@@ -7,18 +10,12 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
-import android.view.ViewGroup
 import android.view.ViewTreeObserver.OnScrollChangedListener
-import android.widget.EditText
-import android.widget.ScrollView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
-import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.updateLayoutParams
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,9 +26,16 @@ class MainActivity : AppCompatActivity() {
         loadData()
 
 
+        val tasks: View = findViewById(R.id.tasksicon)
+
+
+        hidetasksicon()
+
+
         val fab: View = findViewById(R.id.fab)
 
         val fab2: View = findViewById(R.id.fab2)
+
 
 
         fab.setOnClickListener {
@@ -94,6 +98,12 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private fun hidetasksicon() {
+        val tasks: View = findViewById(R.id.tasksicon)
+        tasks.visibility = View.GONE
+    }
+
+
     private fun saveData(){
         val thisnote = findViewById<EditText>(R.id.thisnote)
         val counter =findViewById<TextView>(R.id.counter)
@@ -106,6 +116,8 @@ class MainActivity : AppCompatActivity() {
         thisnote.text = Editable.Factory.getInstance().newEditable(note)
         time.text = exptim
 
+        //saving text to shared prefs
+
         val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.apply {
@@ -116,9 +128,18 @@ class MainActivity : AppCompatActivity() {
 
         Toast.makeText(this,"Сохранено!", Toast.LENGTH_LONG).show()
 
+        //widget update
+        val ids = AppWidgetManager.getInstance(application).getAppWidgetIds(
+            ComponentName(
+                application,
+                NoteWidget::class.java
+            )
+        )
+        val myWidget = NoteWidget()
+        myWidget.onUpdate(this, AppWidgetManager.getInstance(this), ids)
     }
 
-    private fun loadData(){
+    fun loadData(){
         val thisnote = findViewById<EditText>(R.id.thisnote)
         val counter =findViewById<TextView>(R.id.counter)
         val time = findViewById<TextView>(R.id.counter2)
@@ -142,6 +163,8 @@ class MainActivity : AppCompatActivity() {
         saveData()
         finish()
     }
+
+
 
 
 }
