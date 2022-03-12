@@ -17,6 +17,8 @@
 
         <item name="colorOnBackground">@color/colorFabIcon</item>
 
+        <item name="colorOnContainer">@color/accent_1_1000</item>
+
         <item name="android:navigationBarColor">
             @android:color/transparent
         </item>

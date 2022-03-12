@@ -23,6 +23,8 @@
 
         <item name="colorOnBackground">@color/colorFabIcon</item>
 
+        <item name="colorOnContainer">@color/accent_1_1000</item>
+
     </style>
 
     <style name="AppTheme.AppWidgetContainerParent" parent="@android:style/Theme.DeviceDefault.DayNight">

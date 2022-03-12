@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -25,11 +24,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
-
-
-
+                android:orientation="horizontal">
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -50,11 +45,11 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
+                        android:id="@+id/tasksicon"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/checkbox"
                         android:layout_marginRight="10dp"
-                        android:id="@+id/tasksicon"
+                        android:src="@drawable/checkbox"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -65,10 +60,10 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_height="20dp"
                 android:background="?colorSecondary"
                 android:gravity="center"
-                android:orientation="horizontal"
-                android:layout_height="20dp">
+                android:orientation="horizontal">
 
 
                 <TextView
@@ -76,15 +71,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="15dp"
-                    android:textColor="?colorOnPrimary"
-                    android:text="@string/count1" />
+                    android:text="@string/count1"
+                    android:textColor="?colorOnPrimary" />
 
                 <TextView
                     android:id="@+id/counter2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="?colorOnPrimary"
-                    android:text="@string/count2" />
+                    android:text="@string/count2"
+                    android:textColor="?colorOnPrimary" />
 
             </LinearLayout>
 
@@ -93,26 +88,26 @@
 
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
-            android:background="?colorSecondaryContainer"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="?colorSecondaryContainer">
 
 
             <ScrollView
-                android:layout_width="match_parent"
                 android:id="@+id/scrollview"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
                         android:layout_marginLeft="3dp"
+                        android:layout_marginTop="3dp"
                         android:layout_marginRight="3dp"
                         android:layout_marginBottom="15dp">
 
@@ -127,7 +122,6 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
 
-
                 </LinearLayout>
             </ScrollView>
 
@@ -136,16 +130,16 @@
                 android:id="@+id/fab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="30dp"
                 android:clickable="true"
                 app:backgroundTint="?colorPrimary"
-                app:tint="?colorOnBackground"
-                android:layout_gravity="bottom|end"
                 app:borderWidth="0dp"
                 app:fabCustomSize="65dp"
                 app:maxImageSize="35dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="30dp"
-                app:srcCompat="@drawable/info" />
+                app:srcCompat="@drawable/info"
+                app:tint="?colorOnBackground" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab2"
@@ -154,21 +148,19 @@
                 android:layout_gravity="bottom|end"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="110dp"
-                app:backgroundTint="?colorPrimary"
-                app:tint="?colorOnBackground"
                 android:clickable="true"
                 android:src="@drawable/save"
+                app:backgroundTint="?colorPrimary"
                 app:borderWidth="0dp"
                 app:fabCustomSize="65dp"
                 app:maxImageSize="35dp"
+                app:tint="?colorOnBackground"
                 tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
 
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

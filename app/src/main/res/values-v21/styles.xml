@@ -3,6 +3,7 @@
     <style name="Widget.JustNotes.AppWidget.Container" parent="android:Widget">
         <item name="android:padding">5sp</item>
         <item name="android:background">@drawable/app_widget_background</item>
+        <item name="android:textColor">@color/md_theme_light_shadow</item>
     </style>
 
     <style name="Widget.JustNotes.AppWidget.InnerView" parent="android:Widget">

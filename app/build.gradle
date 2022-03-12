@@ -10,7 +10,7 @@ android {
         applicationId "com.mdenisov338.justnotesapp"
         minSdk 26
         targetSdk 32
-        versionCode 21
+        versionCode 22
         versionName "1.5.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
