@@ -60,7 +60,7 @@ internal fun updateAppWidget(
 
 
     val launchIntent2 = context!!.packageManager.getLaunchIntentForPackage("com.mdenisov338.justnotesapp")
-    val pendingIntent2 = PendingIntent.getActivity(context, 1, launchIntent2, PendingIntent.FLAG_UPDATE_CURRENT)
+    val pendingIntent2 = PendingIntent.getActivity(context, 1, launchIntent2, PendingIntent.FLAG_IMMUTABLE)
     views.setOnClickPendingIntent(R.id.appwidget_text, pendingIntent2)
 
     appWidgetManager.updateAppWidget(appWidgetId, views)

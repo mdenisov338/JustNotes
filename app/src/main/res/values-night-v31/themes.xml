@@ -3,8 +3,28 @@
     <!--
     Having themes.xml for night-v31 because of the priority order of the resource qualifiers.
     -->
+    <style name="AppTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorAccent">@color/primaryColor</item>
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryVariantColor</item>
+        <item name="colorOnPrimary">@color/accent_1_900</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondary</item>
+        <item name="colorOnSecondary">@color/secondaryVariantColor</item>
+        <item name="colorSecondaryContainer">@color/accent_2_800</item>
+
+        <item name="colorOnBackground">@color/colorFabIcon</item>
+
+        <item name="android:navigationBarColor">
+            @android:color/transparent
+        </item>
+    </style>
+
     <style name="AppTheme.AppWidgetContainerParent" parent="@android:style/Theme.DeviceDefault.DayNight">
         <item name="appWidgetRadius">@android:dimen/system_app_widget_background_radius</item>
         <item name="appWidgetInnerRadius">@android:dimen/system_app_widget_inner_radius</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
 </resources>

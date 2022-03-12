@@ -2,11 +2,12 @@
     style="@style/Widget.JustNotes.AppWidget.Container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@android:id/background"
     android:theme="@style/AppTheme.AppWidgetContainer">
 
     <TextView
         android:id="@+id/appwidget_text"
-        android:background="@drawable/rounded_corner"
+        android:background="@drawable/app_widget_inner_view_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"

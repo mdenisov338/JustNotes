@@ -7,7 +7,7 @@
 
     <style name="Widget.JustNotes.AppWidget.InnerView" parent="android:Widget">
         <item name="android:padding">5sp</item>
-        <item name="android:background">@drawable/app_widget_inner_view_background</item>
+        <item name="android:background">@color/md_theme_dark_primaryContainer</item>
     </style>
 
 
