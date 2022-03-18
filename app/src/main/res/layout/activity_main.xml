@@ -136,8 +136,7 @@
                 android:clickable="true"
                 app:backgroundTint="?colorPrimary"
                 app:borderWidth="0dp"
-                app:fabCustomSize="65dp"
-                app:maxImageSize="35dp"
+                app:maxImageSize="30dp"
                 app:srcCompat="@drawable/info"
                 app:tint="?colorOnBackground" />
 
@@ -147,13 +146,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
                 android:layout_marginEnd="20dp"
-                android:layout_marginBottom="110dp"
+                android:layout_marginBottom="100dp"
                 android:clickable="true"
                 android:src="@drawable/save"
                 app:backgroundTint="?colorPrimary"
                 app:borderWidth="0dp"
-                app:fabCustomSize="65dp"
-                app:maxImageSize="35dp"
+                app:maxImageSize="30dp"
                 app:tint="?colorOnBackground"
                 tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 

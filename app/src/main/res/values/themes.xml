@@ -11,6 +11,7 @@
         <item name="colorPrimaryVariant">@color/md_theme_light_onSecondaryContainer</item>
         <item name="colorOnPrimary">@color/md_theme_light_background</item>
         <item name="colorOnBackground">@color/md_theme_light_shadow</item>
+        <item name="colorTertiary">@color/md_theme_light_tertiary</item>
 
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/md_theme_light_secondary</item>
