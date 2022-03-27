@@ -6,12 +6,17 @@
             @android:color/transparent
         </item>
 
+        <item name="actionOverflowButtonStyle">@style/Threedotsmenu</item>
+
+
         <item name="colorAccent">@color/md_theme_light_onSecondaryContainer</item>
         <item name="colorPrimary">@color/md_theme_light_primary</item>
         <item name="colorPrimaryVariant">@color/md_theme_light_onSecondaryContainer</item>
-        <item name="colorOnPrimary">@color/md_theme_light_background</item>
+        <item name="colorOnPrimary">@color/white</item>
         <item name="colorOnBackground">@color/md_theme_light_shadow</item>
-        <item name="colorTertiary">@color/md_theme_light_tertiary</item>
+        <item name="colorTertiary">@color/md_theme_dark_tertiary</item>
+        <item name="colorOnTertiary">@color/md_theme_dark_tertiaryContainer</item>
+        <item name="colorTertiaryContainer">@color/black</item>
 
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/md_theme_light_secondary</item>
@@ -21,6 +26,7 @@
 
 
     </style>
+
 
     <style name="AppTheme.AppWidgetContainerParent" parent="@android:style/Theme.DeviceDefault">
         <!-- Radius of the outer bound of widgets to make the rounded corners -->
@@ -35,5 +41,9 @@
     <style name="AppTheme.AppWidgetContainer" parent="AppTheme.AppWidgetContainerParent">
         <!-- Apply padding to avoid the content of the widget colliding with the rounded corners -->
         <item name="appWidgetPadding">16dp</item>
+    </style>
+
+    <style name="Threedotsmenu" parent="Widget.AppCompat.Light.ActionButton.Overflow">
+        <item name="tint">#FFFFFF</item>
     </style>
 </resources>

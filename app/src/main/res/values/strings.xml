@@ -2,13 +2,13 @@
     <string name="app_name">JustNotes</string>
     <string name="about">Welcome to JustNotes!</string>
     <string name="about2">This app created for fast and comfortable text editing.</string>
-    <string name="changes">Useful Links:</string>
+    <string name="changes">Social media:</string>
     <string name="vk">VK group</string>
     <string name="gh">Github</string>
     <string name="back">Back</string>
     <string name="inf">Information</string>
     <string name="site">Site</string>
-    <string name="verison">Version: 1.5.1</string>
+    <string name="verison">Version: 1.6.0\nmdenisovapps</string>
     <string name="count1">Character counter</string>
     <string name="count2">Reading time</string>
     <string name="minuts">mins</string>
@@ -19,4 +19,8 @@
     <string name="appwidget_text">JustNotes</string>
     <string name="add_widget">Add widget</string>
     <string name="app_widget_description">This is an JustNotes App widget</string>
+    <string name="counters">Character count | Reading time (mins.)</string>
+    <string name="option1">Clear text</string>
+    <string name="option2">Text info</string>
+    <string name="option3">App info</string>
 </resources>

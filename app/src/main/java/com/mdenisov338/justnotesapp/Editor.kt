@@ -18,32 +18,6 @@ class Editor : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(com.mdenisov338.justnotesapp.R.layout.activity_editor)
         WindowCompat.setDecorFitsSystemWindows(window, false)
-
-        val textView = findViewById<TextView>(com.mdenisov338.justnotesapp.R.id.textView)
-        val myCustomFont : Typeface? = ResourcesCompat.getFont(this, com.mdenisov338.justnotesapp.R.font.monty)
-        textView.typeface = myCustomFont
-
-        val textView2 = findViewById<TextView>(com.mdenisov338.justnotesapp.R.id.textView2)
-        val textView3 = findViewById<TextView>(com.mdenisov338.justnotesapp.R.id.textView3)
-        val textView4 = findViewById<TextView>(com.mdenisov338.justnotesapp.R.id.textView4)
-        val textView5 = findViewById<TextView>(com.mdenisov338.justnotesapp.R.id.textView5)
-        textView2.typeface = myCustomFont
-        textView3.typeface = myCustomFont
-        textView4.typeface = myCustomFont
-        textView5.typeface = myCustomFont
-
-        val btn = findViewById<Button>(com.mdenisov338.justnotesapp.R.id.button4)
-        val btn2 = findViewById<Button>(com.mdenisov338.justnotesapp.R.id.button6)
-        val btn3 = findViewById<Button>(com.mdenisov338.justnotesapp.R.id.button7)
-        val btn4 = findViewById<Button>(com.mdenisov338.justnotesapp.R.id.button8)
-        val btn5 = findViewById<Button>(com.mdenisov338.justnotesapp.R.id.button9)
-        val btn6 = findViewById<Button>(com.mdenisov338.justnotesapp.R.id.button10)
-        btn.typeface = myCustomFont
-        btn2.typeface = myCustomFont
-        btn3.typeface = myCustomFont
-        btn4.typeface = myCustomFont
-        btn5.typeface = myCustomFont
-        btn6.typeface = myCustomFont
     }
 
     fun exisave(view: View) {

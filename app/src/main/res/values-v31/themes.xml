@@ -10,11 +10,14 @@
             @android:color/transparent
         </item>
 
+        <item name="actionOverflowButtonStyle">@style/Threedotsmenu</item>
+
         <item name="colorAccent">@color/primaryColor</item>
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryVariant">@color/primaryVariantColor</item>
         <item name="colorOnPrimary">@color/accent_1_900</item>
         <item name="colorTertiary">@color/accent_3_400</item>
+        <item name="colorTertiaryContainer">@color/black</item>
 
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/colorSecondary</item>
@@ -32,5 +35,8 @@
         <item name="appWidgetRadius">@android:dimen/system_app_widget_background_radius</item>
         <item name="appWidgetInnerRadius">@android:dimen/system_app_widget_inner_radius</item>
         <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+    <style name="Threedotsmenu" parent="Widget.AppCompat.Light.ActionButton.Overflow">
+        <item name="tint">#FFFFFF</item>
     </style>
 </resources>
