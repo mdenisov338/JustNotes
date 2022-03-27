@@ -5,14 +5,11 @@ import android.appwidget.AppWidgetManager
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.text.Editable
-import android.text.TextWatcher
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -34,54 +31,15 @@ class MainActivity : AppCompatActivity() {
 
         loadData()
 
-
-
-
-
-       /* val textView = findViewById<TextView>(R.id.textView)
-        val myCustomFont : Typeface? = ResourcesCompat.getFont(this, R.font.monty)
-        textView.typeface = myCustomFont
-
-        var oldScrollYPostion = 0
-
-        val counter = findViewById<TextView>(R.id.counter)
-        val thisnote = findViewById<EditText>(R.id.thisnote)
-        val scrollView = findViewById<ScrollView>(R.id.scrollview)
-
-        scrollView.viewTreeObserver.addOnScrollChangedListener(OnScrollChangedListener {
-            if (scrollView.scrollY > oldScrollYPostion) {
-                fab.visibility = View.GONE
-                fab2.visibility = View.GONE
-            } else if (scrollView.scrollY < oldScrollYPostion || scrollView.scrollY <= 0) {
-                fab.visibility = View.VISIBLE
-                fab2.visibility = View.VISIBLE
-            }
-            oldScrollYPostion = scrollView.scrollY
-        })
-
-        val count1: String = getString(R.string.count1)
-
-
-        thisnote.addTextChangedListener(object: TextWatcher {
-            override fun beforeTextChanged(p0: CharSequence?,
-                                           p1: Int, p2: Int, p3: Int) {
-                counter.text = "${count1}: ${p0?.toString()?.length}"
-
-            }
-
-            override fun onTextChanged(p0: CharSequence?,
-                                       p1: Int, p2: Int, p3: Int) {
-                // count number of inputted characters in edit text
-                counter.text = "${count1}: ${p0?.toString()?.length}"
-            }
-
-            override fun afterTextChanged(p0: Editable?) {
-                counter.text = "${count1}: ${p0?.toString()?.length}"
-            }
-        })*/
-
-
     }
+
+    fun getStatusBarHeight(): Int {
+        val resourceId = resources.getIdentifier("status_bar_height", "dimen", "android")
+        return if (resourceId > 0) {
+            resources.getDimensionPixelSize(resourceId)
+        } else 0
+    }
+
 
 
 

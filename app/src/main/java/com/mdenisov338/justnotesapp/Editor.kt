@@ -1,16 +1,11 @@
 package com.mdenisov338.justnotesapp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import androidx.core.view.WindowCompat
-import android.graphics.Typeface
 import android.net.Uri
+import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.TextView
-import androidx.core.content.res.ResourcesCompat
-import com.google.android.material.color.DynamicColors
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
 
 
 class Editor : AppCompatActivity() {
@@ -19,6 +14,7 @@ class Editor : AppCompatActivity() {
         setContentView(com.mdenisov338.justnotesapp.R.layout.activity_editor)
         WindowCompat.setDecorFitsSystemWindows(window, false)
     }
+
 
     fun exisave(view: View) {
         finish()
