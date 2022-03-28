@@ -25,7 +25,7 @@
             @android:color/transparent
         </item>
 
-        <!-- Optional: set to transparent if your app is drawing behind the status bar. -->
+
         <item name="android:statusBarColor">
             @color/accent_1_400
         </item>

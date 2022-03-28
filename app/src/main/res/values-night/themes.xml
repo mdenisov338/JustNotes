@@ -18,6 +18,10 @@
         @android:color/transparent
     </item>
 
+        <item name="android:statusBarColor">
+            @android:color/transparent
+        </item>
+
         <item name="actionOverflowButtonStyle">@style/Threedotsmenu</item>
 
    </style>
