@@ -16,10 +16,6 @@ class Editor : AppCompatActivity() {
     }
 
 
-    fun exisave(view: View) {
-        finish()
-    }
-
     fun vk_a(view: View){
         val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://vk.com/mdenisovapps"))
         startActivity(i)

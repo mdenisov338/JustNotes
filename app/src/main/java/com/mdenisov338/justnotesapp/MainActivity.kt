@@ -33,38 +33,23 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun getStatusBarHeight(): Int {
-        val resourceId = resources.getIdentifier("status_bar_height", "dimen", "android")
-        return if (resourceId > 0) {
-            resources.getDimensionPixelSize(resourceId)
-        } else 0
-    }
-
-
 
 
     private fun saveData(){
         val thisnote = findViewById<EditText>(R.id.thisnote)
-        //val counter =findViewById<TextView>(R.id.counter)
 
 
         val note: String = thisnote.text.toString()
-        //val count: String = counter.text.toString()
         thisnote.text = Editable.Factory.getInstance().newEditable(note)
-
-
-        //saving text to shared prefs
 
         val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.apply {
             putString("STRING_KEY", note)
-            //putString("STRING_NUM", count)
         }.apply()
 
         Toast.makeText(this,"Сохранено!", Toast.LENGTH_LONG).show()
 
-        //widget update
         val ids = AppWidgetManager.getInstance(application).getAppWidgetIds(
             ComponentName(
                 application,
@@ -77,14 +62,11 @@ class MainActivity : AppCompatActivity() {
 
     fun loadData(){
         val thisnote = findViewById<EditText>(R.id.thisnote)
-        //val counter =findViewById<TextView>(R.id.counter)
         val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         if(sharedPreferences.contains("STRING_KEY")) {
             val savedString = sharedPreferences.getString("STRING_KEY", null)
-            val savedNum = sharedPreferences.getString("STRING_NUM", null)
 
             thisnote.text = Editable.Factory.getInstance().newEditable(savedString)
-            //counter.text = savedNum
         } else {
 
         }
@@ -104,7 +86,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle item selection
         return when (item.itemId) {
             R.id.first -> {
                 val thisnote = findViewById<EditText>(R.id.thisnote)

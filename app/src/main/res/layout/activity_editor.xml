@@ -28,9 +28,9 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/inf"
-        android:font="@font/monty"
+        android:textStyle="bold"
         android:layout_marginBottom="5dp"
-        android:textColor="?colorTertiaryContainer"
+        android:textColor="@color/white"
         android:textSize="35sp"
          />
 
@@ -155,7 +155,7 @@
         android:gravity="center"
         android:text="@string/verison"
         android:textColor="?colorAccent"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
