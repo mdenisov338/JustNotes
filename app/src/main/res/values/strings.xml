@@ -8,11 +8,11 @@
     <string name="back">Back</string>
     <string name="inf">Information</string>
     <string name="site">Site</string>
-    <string name="verison" translatable="false">v1.6.1\nmdenisovapps</string>
+    <string name="verison" translatable="false">v1.6.2\nmdenisovapps</string>
     <string name="count1">Character counter</string>
     <string name="count2">Reading time</string>
     <string name="minuts">mins</string>
-    <string name="hint">Start write here...</string>
+    <string name="hint">Write here</string>
     <string name="tg">Telegram Group</string>
     <string name="tasks">Tasks</string>
     <string name="rate">Rate app</string>

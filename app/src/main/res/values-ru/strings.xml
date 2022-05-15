@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name" translatable="false">JustNotes</string>
-    <string name="verison" translatable="false">v1.6.1\nmdenisovapps</string>
+    <string name="verison" translatable="false">v1.6.2\nmdenisovapps</string>
     <string name="about">Добро пожаловать в приложение JustNotes!</string>
     <string name="about2">Приложение создано для быстрого и удобного редактирования текста.</string>
     <string name="changes">Социальные сети:</string>
@@ -14,7 +14,7 @@
     <string name="count1">Счетчик символов</string>
     <string name="count2">Время чтения</string>
     <string name="minuts">мин.</string>
-    <string name="hint">Начните писать здесь...</string>
+    <string name="hint">Пишите здесь</string>
     <string name="tasks">Задачи</string>
     <string name="rate">Оцените приложение</string>
     <string name="appwidget_text">JustNotes</string>
