@@ -34,23 +34,23 @@
                     android:orientation="vertical">
 
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="3dp"
-                        android:layout_marginTop="3dp"
-                        android:layout_marginRight="3dp"
-                        android:layout_marginBottom="15dp">
 
-                        <com.google.android.material.textfield.TextInputEditText
+
+
+
+                        <EditText
                             android:id="@+id/thisnote"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/hint"
-                            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+                            android:text="@string/hint"
+                            android:layout_weight="1"
+                            android:autofillHints=""
+                            android:background="@android:color/transparent"
+                            android:gravity="start|top"
+                            android:inputType="textMultiLine"
+                            android:padding="20dp" />
 
 
-                    </com.google.android.material.textfield.TextInputLayout>
 
 
                 </LinearLayout>

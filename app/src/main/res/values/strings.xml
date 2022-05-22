@@ -8,7 +8,7 @@
     <string name="back">Back</string>
     <string name="inf">Information</string>
     <string name="site">Site</string>
-    <string name="verison" translatable="false">v1.6.3\nmdenisovapps</string>
+    <string name="verison" translatable="false">v1.6.3\nby mdenisovapps</string>
     <string name="count1">Character counter</string>
     <string name="count2">Reading time</string>
     <string name="minuts">mins</string>
@@ -23,4 +23,9 @@
     <string name="option1">Clear text</string>
     <string name="option2">Text info</string>
     <string name="option3">App info</string>
+    <string name="option4">Bold</string>
+    <string name="option5">Italic</string>
+    <string name="option6">Striked</string>
+    <string name="option7">Normal</string>
+
 </resources>

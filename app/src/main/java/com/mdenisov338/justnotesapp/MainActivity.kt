@@ -12,9 +12,10 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.EditText
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.view.menu.MenuBuilder
 import androidx.core.view.WindowCompat
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 
 class MainActivity : AppCompatActivity() {
@@ -30,6 +31,7 @@ class MainActivity : AppCompatActivity() {
 
 
         loadData()
+
 
     }
 
@@ -82,6 +84,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater: MenuInflater = menuInflater
         inflater.inflate(R.menu.mymenu, menu)
+
         return true
     }
 
@@ -96,18 +99,18 @@ class MainActivity : AppCompatActivity() {
             R.id.second -> {
                 val thisnote = findViewById<EditText>(R.id.thisnote)
                 val string: String = getString(R.string.counters)
-                var count = thisnote.getText().length
+                var count = thisnote.text.length
                 var time = count/512
 
-                val builder = AlertDialog.Builder(this, R.style.CustomAlertDialog)
 
-                builder.setTitle("$string")
-                builder.setMessage("$count | ≈$time")
 
-                builder.setPositiveButton("OK") { dialog, which ->
-                }
+                MaterialAlertDialogBuilder(this)
+                    .setTitle("$string")
+                    .setMessage("$count | ≈$time")
+                    .setPositiveButton("OK") { dialog, which ->
+                    }
+                .show()
 
-                builder.show()
                 true
             }
             R.id.third -> {
@@ -117,6 +120,8 @@ class MainActivity : AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
+
+
 
 
     }
