@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">JustNotes</string>
+    <string name="about">Willkommen bei JustNotes!</string>
+    <string name="verison">von 5 hex\nv1.6.4</string>
+    <string name="about2">Diese App wurde für die schnelle und komfortable Textbearbeitung erstellt.</string>
+    <string name="changes">Sozialen Medien:</string>
+    <string name="vk">Vkontakte</string>
+    <string name="tg">Telegram</string>
+    <string name="gh">Github</string>
+    <string name="site">Webseite</string>
+    <string name="back">zurück</string>
+    <string name="inf">Information</string>
+    <string name="count1">Zeichenzähler</string>
+    <string name="count2">Lesezeit</string>
+    <string name="minuts">Mindest.</string>
+    <string name="hint">Hier schreiben</string>
+    <string name="tasks">Aufgaben</string>
+    <string name="rate">Bewerte die App</string>
+    <string name="appwidget_text">JustNotes</string>
+    <string name="add_widget">Widget hinzufügen</string>
+    <string name="app_widget_description">Es ist nur ein Widget :)</string>
+    <string name="counters">Anzahl der Zeichen | Lesezeit (Min.)</string>
+    <string name="option1">Klartext</string>
+    <string name="option2">Textinformationen</string>
+    <string name="option3">Über die App</string>
+    <string name="option4">Fett</string>
+    <string name="option5">Kursivschrift</string>
+    <string name="option6">Durchgestrichen</string>
+    <string name="option7">Normal</string>
+</resources>

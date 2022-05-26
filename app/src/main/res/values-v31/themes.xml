@@ -15,6 +15,9 @@
             @android:color/transparent
         </item>
 
+        <item name="android:windowSplashScreenAnimationDuration">3000</item>
+        <item name="android:windowSplashScreenBackground">@color/primaryColor</item>
+
         <item name="actionOverflowButtonStyle">@style/Threedotsmenu</item>
 
         <item name="colorAccent">@color/primaryColor</item>

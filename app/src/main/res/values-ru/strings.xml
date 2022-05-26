@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name" translatable="false">JustNotes</string>
-    <string name="verison" translatable="false">v1.6.3\nby mdenisovapps</string>
+    <string name="verison" translatable="false">создано 5 hex\nверсия 1.6.4</string>
     <string name="about">Добро пожаловать в приложение JustNotes!</string>
     <string name="about2">Приложение создано для быстрого и удобного редактирования текста.</string>
     <string name="changes">Социальные сети:</string>

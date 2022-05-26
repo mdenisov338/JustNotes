@@ -42,7 +42,7 @@
                             android:id="@+id/thisnote"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/hint"
+                            android:hint="@string/hint"
                             android:layout_weight="1"
                             android:autofillHints=""
                             android:background="@android:color/transparent"

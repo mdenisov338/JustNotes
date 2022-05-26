@@ -17,13 +17,13 @@ class Editor : AppCompatActivity() {
 
 
     fun vk_a(view: View){
-        val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://vk.com/mdenisovapps"))
+        val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://vk.com/fivehex"))
         startActivity(i)
     }
 
     fun tg_a(view: View){
 
-        val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/mdenisovapps"))
+        val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/fivehex"))
                 startActivity(i)
     }
 
@@ -35,7 +35,7 @@ class Editor : AppCompatActivity() {
 
     fun site_a(view: View){
 
-        val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://mdenisovapps.carrd.co/"))
+        val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://5hex.carrd.co/"))
                 startActivity(i)
     }
 
