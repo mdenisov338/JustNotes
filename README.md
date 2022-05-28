@@ -1,7 +1,7 @@
 
 # JustNotes
 
-A simple app to comfortable use note with new design.
+A simple app to comfortable use note with new design. Full monet support
 
 # Fast.Simple.Light.
 
