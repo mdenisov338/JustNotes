@@ -16,16 +16,13 @@ import android.view.View
 import android.view.animation.AnticipateInterpolator
 import android.widget.EditText
 import android.widget.Toast
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.view.menu.MenuBuilder
 import androidx.core.animation.doOnEnd
 import androidx.core.view.WindowCompat
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 
 class MainActivity : AppCompatActivity() {
-    @RequiresApi(Build.VERSION_CODES.S)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -39,22 +36,20 @@ class MainActivity : AppCompatActivity() {
 
         loadData()
 
-        splashScreen.setOnExitAnimationListener { splashScreenView ->
-            // Create your custom animation.
-            val slideUp = ObjectAnimator.ofFloat(
-                splashScreenView,
-                View.TRANSLATION_Y,
-                0f,
-                -splashScreenView.height.toFloat()
-            )
-            slideUp.interpolator = AnticipateInterpolator()
-            slideUp.duration = 600L
-
-            // Call SplashScreenView.remove at the end of your custom animation.
-            slideUp.doOnEnd { splashScreenView.remove() }
-
-            // Run your animation.
-            slideUp.start()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            splashScreen.setOnExitAnimationListener { splashScreenView ->
+                val slideUp = ObjectAnimator.ofFloat(
+                    splashScreenView,
+                    View.TRANSLATION_Y,
+                    0f,
+                    -splashScreenView.height.toFloat()
+                )
+                slideUp.interpolator = AnticipateInterpolator()
+                slideUp.duration = 600L
+                slideUp.doOnEnd { splashScreenView.remove() }
+                slideUp.start()
+            }
+        } else {
         }
     }
 
@@ -122,8 +117,8 @@ class MainActivity : AppCompatActivity() {
             R.id.second -> {
                 val thisnote = findViewById<EditText>(R.id.thisnote)
                 val string: String = getString(R.string.counters)
-                var count = thisnote.text.length
-                var time = count/512
+                val count = thisnote.text.length
+                val time = count/512
 
 
 

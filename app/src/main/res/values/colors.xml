@@ -64,4 +64,6 @@
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="launcher_icon_background">#71DBA5</color>
 </resources>

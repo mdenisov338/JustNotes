@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">JustNotes</string>
     <string name="about">Willkommen bei JustNotes!</string>
-    <string name="verison">von 5 hex\nv1.6.4</string>
+    <string name="verison">von 5 hex\nv1.6.5</string>
     <string name="about2">Diese App wurde für die schnelle und komfortable Textbearbeitung erstellt.</string>
     <string name="changes">Sozialen Medien:</string>
     <string name="vk">Vkontakte</string>
