@@ -2,7 +2,7 @@
 
 # JustNotes
 
-A simple app to comfortable use note with new design. Full monet support
+A simple app to comfortable use note with new design. Full monet support. Click "plus" to start write, hold on card to delete note.
 
 # Fast.Simple.Light.
 
