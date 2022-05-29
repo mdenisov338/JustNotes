@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name" translatable="false">JustNotes</string>
-    <string name="verison" translatable="false">создано 5 hex\nверсия 1.6.5</string>
+    <string name="verison" translatable="false">создано 5 hex\nверсия 2.0.0</string>
     <string name="about">Добро пожаловать в приложение JustNotes!</string>
     <string name="about2">Приложение создано для быстрого и удобного редактирования текста.</string>
     <string name="changes">Социальные сети:</string>
@@ -23,9 +23,12 @@
     <string name="counters">Количество символов | Время чтения (мин.)</string>
     <string name="option1">Очистить текст</string>
     <string name="option2">Информация о тексте</string>
-    <string name="option3">О приложении</string>
-    <string name="option4">Жирный</string>
-    <string name="option5">Курсив</string>
-    <string name="option6">Зачеркнутый</string>
-    <string name="option7">Нормальный</string>
+    <string name="option3">Сохранить и выйти</string>
+    <string name="lastedit">"Последнее изменение: "</string>
+    <string name="Title">Название заметки</string>
+    <string name="deleted">удалено</string>
+    <string name="saved">сохранено</string>
+    <string name="pos">Да</string>
+    <string name="neg">Нет</string>
+    <string name="delWarn">Вы действительно хотите удалить заметку?</string>
 </resources>

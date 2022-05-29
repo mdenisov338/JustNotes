@@ -1,6 +1,6 @@
 <resources>
     <style name="AppTheme" parent="Theme.Material3.Dark.NoActionBar">
-    <item name="colorAccent">@color/md_theme_dark_onSecondaryContainer</item>
+    <item name="colorAccent">@color/md_theme_dark_onPrimary</item>
     <item name="colorPrimary">@color/md_theme_light_primary</item>
     <item name="colorPrimaryVariant">@color/md_theme_dark_onSecondaryContainer</item>
     <item name="colorOnPrimary">@color/black</item>

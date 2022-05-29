@@ -6,6 +6,7 @@
     <color name="secondaryVariantColor">@color/accent_2_700</color>
     <color name="colorFabIcon">@color/neutral_1_1000</color>
     <color name="colorS">@color/accent_1_700</color>
+    <color name="accent">@color/accent_1_600</color>
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>

@@ -2,8 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <queries>
-        <package android:name="com.spotify.music"/>
+        <package android:name="com.spotify.music" />
         <package android:name="com.mdenisov338.justnotesapp" />
+
         <intent>
             <action android:name="com.mdenisov338.justnotesapp" />
         </intent>
@@ -16,24 +17,17 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <receiver
-            android:name=".NoteWidget"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/note_widget_info" />
-        </receiver>
+        <activity
+            android:name=".AddEditNoteActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".Editor"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustPan">
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

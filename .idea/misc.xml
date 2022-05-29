@@ -16,13 +16,16 @@
         <entry key="..\:/android/JustNotes/app/src/main/res/drawable/popup_background.xml" value="0.3185" />
         <entry key="..\:/android/JustNotes/app/src/main/res/drawable/rounded_corner.xml" value="0.3355" />
         <entry key="..\:/android/JustNotes/app/src/main/res/drawable/textedit.xml" value="0.3828125" />
+        <entry key="..\:/android/JustNotes/app/src/main/res/layout/activity_add_edit_note.xml" value="0.21096491228070174" />
         <entry key="..\:/android/JustNotes/app/src/main/res/layout/activity_editor.xml" value="0.33" />
+        <entry key="..\:/android/JustNotes/app/src/main/res/layout/activity_list.xml" value="0.3087719298245614" />
         <entry key="..\:/android/JustNotes/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/android/JustNotes/app/src/main/res/layout/activity_note_editor.xml" value="0.36666666666666664" />
         <entry key="..\:/android/JustNotes/app/src/main/res/layout/activity_tasks.xml" value="0.20657894736842106" />
         <entry key="..\:/android/JustNotes/app/src/main/res/layout/add_note_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/android/JustNotes/app/src/main/res/layout/customview.xml" value="0.3087719298245614" />
         <entry key="..\:/android/JustNotes/app/src/main/res/layout/example_item.xml" value="0.3087719298245614" />
+        <entry key="..\:/android/JustNotes/app/src/main/res/layout/note_rv_item.xml" value="0.22280701754385965" />
         <entry key="..\:/android/JustNotes/app/src/main/res/layout/note_widget.xml" value="0.2100877192982456" />
         <entry key="..\:/android/JustNotes/app/src/main/res/layout/todo_task.xml" value="0.20657894736842106" />
         <entry key="..\:/android/JustNotes/app/src/main/res/layout/toolbar.xml" value="0.20657894736842106" />

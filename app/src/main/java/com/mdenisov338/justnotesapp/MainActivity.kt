@@ -1,28 +1,30 @@
 package com.mdenisov338.justnotesapp
 
-
 import android.animation.ObjectAnimator
-import android.appwidget.AppWidgetManager
-import android.content.ComponentName
-import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.text.Editable
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.animation.AnticipateInterpolator
-import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.animation.doOnEnd
 import androidx.core.view.WindowCompat
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), NoteClickInterface,  NoteLongClickInterface {
+
+    lateinit var viewModal: NoteViewModal
+    lateinit var notesRV: RecyclerView
+    lateinit var addFAB: FloatingActionButton
+    lateinit var infoFAB: FloatingActionButton
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -33,9 +35,6 @@ class MainActivity : AppCompatActivity() {
         } catch (e: NullPointerException) {
         }
 
-
-        loadData()
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             splashScreen.setOnExitAnimationListener { splashScreenView ->
                 val slideUp = ObjectAnimator.ofFloat(
@@ -45,107 +44,68 @@ class MainActivity : AppCompatActivity() {
                     -splashScreenView.height.toFloat()
                 )
                 slideUp.interpolator = AnticipateInterpolator()
-                slideUp.duration = 600L
+                slideUp.duration = 500L
                 slideUp.doOnEnd { splashScreenView.remove() }
                 slideUp.start()
             }
         } else {
         }
-    }
+        notesRV = findViewById(R.id.notes)
+        addFAB = findViewById(R.id.idFAB)
+        infoFAB = findViewById(R.id.idFAB2)
+
+        notesRV.layoutManager = LinearLayoutManager(this)
+
+        val noteRVAdapter = NoteRVAdapter(this, this, this)
+
+        notesRV.adapter = noteRVAdapter
+
+        viewModal = ViewModelProvider(
+            this,
+            ViewModelProvider.AndroidViewModelFactory.getInstance(application)
+        ).get(NoteViewModal::class.java)
 
 
-
-    private fun saveData(){
-        val thisnote = findViewById<EditText>(R.id.thisnote)
-
-
-        val note: String = thisnote.text.toString()
-        thisnote.text = Editable.Factory.getInstance().newEditable(note)
-
-        val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        editor.apply {
-            putString("STRING_KEY", note)
-        }.apply()
-
-        Toast.makeText(this,"Сохранено!", Toast.LENGTH_LONG).show()
-
-        val ids = AppWidgetManager.getInstance(application).getAppWidgetIds(
-            ComponentName(
-                application,
-                NoteWidget::class.java
-            )
-        )
-        val myWidget = NoteWidget()
-        myWidget.onUpdate(this, AppWidgetManager.getInstance(this), ids)
-    }
-
-    fun loadData(){
-        val thisnote = findViewById<EditText>(R.id.thisnote)
-        val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
-        if(sharedPreferences.contains("STRING_KEY")) {
-            val savedString = sharedPreferences.getString("STRING_KEY", null)
-
-            thisnote.text = Editable.Factory.getInstance().newEditable(savedString)
-        } else {
-
-        }
-    }
-
-
-
-    override fun onBackPressed(){
-        saveData()
-        finish()
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.mymenu, menu)
-
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.first -> {
-                val thisnote = findViewById<EditText>(R.id.thisnote)
-                val text = ""
-                thisnote.text = Editable.Factory.getInstance().newEditable(text)
-                true
+        viewModal.allNotes.observe(this, Observer { list ->
+            list?.let {
+                noteRVAdapter.updateList(it)
             }
-            R.id.second -> {
-                val thisnote = findViewById<EditText>(R.id.thisnote)
-                val string: String = getString(R.string.counters)
-                val count = thisnote.text.length
-                val time = count/512
-
-
-
-                MaterialAlertDialogBuilder(this)
-                    .setTitle("$string")
-                    .setMessage("$count | ≈$time")
-                    .setPositiveButton("OK") { dialog, which ->
-                    }
-                .show()
-
-                true
-            }
-            R.id.third -> {
-                val intent = Intent(this, Editor::class.java)
-                startActivity(intent)
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
+        })
+        addFAB.setOnClickListener {
+            val intent = Intent(this@MainActivity, AddEditNoteActivity::class.java)
+            startActivity(intent)
         }
 
-
-
+        infoFAB.setOnClickListener {
+            val intent = Intent(this@MainActivity, Editor::class.java)
+            startActivity(intent)
+        }
 
     }
 
+    override fun onNoteClick(note: Note) {
+        val intent = Intent(this@MainActivity, AddEditNoteActivity::class.java)
+        intent.putExtra("noteType", "Edit")
+        intent.putExtra("noteTitle", note.noteTitle)
+        intent.putExtra("noteDescription", note.noteDescription)
+        intent.putExtra("noteId", note.id)
+        startActivity(intent)
+    }
 
 
+    override fun onNoteLongClick(note: Note) {
+
+
+        MaterialAlertDialogBuilder(this)
+            .setTitle(R.string.delWarn)
+            .setNegativeButton(resources.getString(R.string.neg)) { dialog, which ->
+
+            }
+            .setPositiveButton(R.string.pos) { dialog, which ->
+                viewModal.deleteNote(note)
+                Toast.makeText(this, R.string.deleted, Toast.LENGTH_LONG).show()
+            }
+            .show()
+    }
 
 }
-

@@ -9,7 +9,7 @@
     <string name="back">atrás</string>
     <string name="inf">Información</string>
     <string name="site">Sitio web</string>
-    <string name="verison">5 hex\n1.6.5</string>
+    <string name="verison">5 hex\n2.0.0</string>
     <string name="count1">Contador de caracteres</string>
     <string name="count2">Tiempo de leer</string>
     <string name="minuts">minutos</string>
@@ -23,9 +23,13 @@
     <string name="counters">Número de caracteres | Tiempo de lectura (min.)</string>
     <string name="option1">Borrar texto</string>
     <string name="option2">Información de texto</string>
-    <string name="option3">Acerca de la aplicación</string>
-    <string name="option4">Graso</string>
-    <string name="option5">Cursiva</string>
-    <string name="option6">tachado</string>
-    <string name="option7">Normal</string>
+    <string name="option3">Guardar y Salir</string>
+    <string name="lastedit">"Última edición: "</string>
+    <string name="Title">Título de la nota</string>
+    <string name="deleted">eliminada</string>
+    <string name="saved">salvado</string>
+    <string name="pos">Sí</string>
+    <string name="neg">No</string>
+    <string name="delWarn">¿Está seguro de que desea eliminar la nota?</string>
+
 </resources>
