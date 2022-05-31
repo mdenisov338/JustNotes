@@ -165,7 +165,7 @@
         android:layout_marginBottom="30dp"
         android:gravity="center"
         android:text="@string/verison"
-        android:textColor="?colorAccent"
+        android:textColor="?colorPrimary"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

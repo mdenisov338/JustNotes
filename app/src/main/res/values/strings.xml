@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">JustNotes</string>
     <string name="about">Welcome to JustNotes!</string>
-    <string name="about2">This app created for fast and comfortable text editing.</string>
+    <string name="about2">This app created for fast and comfortable text editing .Click on the \"plus\" to create a new note. Hold on the card to delete the note.</string>
     <string name="changes">Social media:</string>
     <string name="vk">VK group</string>
     <string name="gh">Github</string>
@@ -22,7 +22,7 @@
     <string name="option1">Clear text</string>
     <string name="option2">Text info</string>
     <string name="option3">Save and exit</string>
-    <string name="verison" translatable="false">by 5 hex\nv2.0.0</string>
+    <string name="verison" translatable="false">by 5 hex\nv2.0.1</string>
     <string name="lastedit">"Last edited: "</string>
     <string name="Title">Note Title</string>
     <string name="deleted">deleted</string>
