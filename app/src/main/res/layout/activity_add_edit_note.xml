@@ -33,18 +33,27 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:layout_height="match_parent">
         <EditText
             android:id="@+id/idEdtNoteDesc"
+            android:autofillHints=""
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:autofillHints=""
             android:background="@android:color/transparent"
             android:gravity="start|top"
             android:hint="@string/hint"
-            android:inputType="textMultiLine"
-            android:layout_margin="10dp"
+            android:isScrollContainer="true"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:paddingBottom="40dp"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+        </ScrollView>
 
 
 
