@@ -18,8 +18,8 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout"
             android:layout_width="match_parent"
-            android:layout_marginTop="5dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -35,26 +35,26 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_marginTop="80dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginTop="80dp"
 
-            android:layout_height="match_parent">
-        <EditText
-            android:id="@+id/idEdtNoteDesc"
-            android:autofillHints=""
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:gravity="start|top"
-            android:hint="@string/hint"
-            android:isScrollContainer="true"
-            android:textCursorDrawable="@drawable/color_cursor"
-            android:paddingBottom="40dp"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+            android:layout_marginRight="20dp">
+
+            <EditText
+                android:id="@+id/idEdtNoteDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="start|top"
+                android:hint="@string/hint"
+                android:isScrollContainer="true"
+                android:paddingBottom="40dp"
+                android:textCursorDrawable="@drawable/color_cursor"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+                android:autofillHints="" />
 
         </ScrollView>
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
