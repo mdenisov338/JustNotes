@@ -31,7 +31,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="90dp"
-            android:backgroundTint="?colorSecondary"
+            android:backgroundTint="?colorAccent"
             android:src="@drawable/add"
             app:tint="@color/white" />
 
@@ -44,7 +44,7 @@
             android:layout_alignParentBottom="true"
             android:layout_margin="20dp"
             android:src="@drawable/info"
-            android:backgroundTint="?colorSecondary"
+            android:backgroundTint="?colorAccent"
             app:tint="@color/white" />
 
     </RelativeLayout>

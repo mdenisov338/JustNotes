@@ -145,8 +145,7 @@
                         android:layout_height="100dp"
                         android:layout_gravity="center|bottom"
                         android:onClick="easter"
-                        app:srcCompat="@drawable/logo_nobg"
-                        android:contentDescription="@string/version" />
+                        app:srcCompat="@drawable/logo_nobg" />
 
                     <TextView
                         android:id="@+id/textView2"
