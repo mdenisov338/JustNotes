@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name" translatable="false">JustNotes</string>
-    <string name="verison" translatable="false">создано 5 hex\n43 (2.0.3)</string>
+    <string name="verison" translatable="false">создано 5 hex\n44 (2.0.3)</string>
     <string name="about">Добро пожаловать в приложение JustNotes!</string>
     <string name="about2">Приложение создано для быстрого и удобного редактирования текста. Нажмите на \"плюс\", чтобы создать новую заметку. Удержите на карточке, что бы удалить заметку.</string>
     <string name="changes">Социальные сети:</string>
