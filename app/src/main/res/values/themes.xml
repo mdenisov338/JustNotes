@@ -11,6 +11,7 @@
         </item>
 
         <item name="actionOverflowButtonStyle">@style/Threedotsmenu</item>
+        <item name="android:windowTranslucentStatus">true</item>
 
 
         <item name="colorAccent">@color/md_theme_dark_onPrimary</item>
@@ -28,10 +29,12 @@
         <item name="colorOnSecondary">@color/md_theme_light_onSecondary</item>
         <item name="colorSecondaryContainer">@color/md_theme_light_secondaryContainer</item>
 
+        <item name="android:windowLightStatusBar">true</item>
+
 
     </style>
 
     <style name="Threedotsmenu" parent="Widget.AppCompat.Light.ActionButton.Overflow">
-        <item name="tint">#FFFFFF</item>
+        <item name="tint">@color/black</item>
     </style>
 </resources>

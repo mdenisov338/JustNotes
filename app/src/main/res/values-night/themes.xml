@@ -23,6 +23,7 @@
         </item>
 
         <item name="actionOverflowButtonStyle">@style/Threedotsmenu</item>
+        <item name="android:windowTranslucentStatus">true</item>
 
    </style>
 

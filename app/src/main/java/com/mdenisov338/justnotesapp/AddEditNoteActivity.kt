@@ -1,7 +1,6 @@
 package com.mdenisov338.justnotesapp
 
 
-import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.view.Menu
@@ -30,11 +29,7 @@ class AddEditNoteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_edit_note)
         WindowCompat.setDecorFitsSystemWindows(window, false)
-        setSupportActionBar(findViewById(R.id.toolbar))
-        try {
-            supportActionBar!!.setDisplayShowTitleEnabled(false)
-        } catch (e: NullPointerException) {
-        }
+        setSupportActionBar(findViewById(R.id.topAppBar))
 
         viewModal = ViewModelProvider(
             this,

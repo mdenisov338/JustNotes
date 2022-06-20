@@ -1,50 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Editor">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="?colorPrimary"
-        android:gravity="bottom"
-        android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/textView"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/inf"
-        android:textStyle="bold"
-        android:layout_marginBottom="5dp"
-        android:textColor="@color/white"
-        android:textSize="35sp"
-         />
+        android:fitsSystemWindows="true">
 
-    </LinearLayout>
-
-        <LinearLayout
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:background="?colorSecondaryContainer"
-            android:layout_height="match_parent">
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/app_name" />
 
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -124,7 +103,7 @@
                             android:onClick="tg_a"
                             android:scaleType="fitXY"
                             app:srcCompat="@drawable/tg"
-                            app:tint="?colorPrimaryVariant" />
+                            app:tint="@color/white" />
 
                         <ImageButton
                             android:id="@+id/button4"
@@ -134,7 +113,7 @@
                             android:onClick="vk_a"
                             android:scaleType="fitXY"
                             app:srcCompat="@drawable/vk"
-                            app:tint="?colorPrimaryVariant" />
+                            app:tint="@color/white" />
 
                     </LinearLayout>
 
@@ -160,12 +139,6 @@
 
                 </LinearLayout>
 
-            </ScrollView>
-        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
-
-    </LinearLayout>
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

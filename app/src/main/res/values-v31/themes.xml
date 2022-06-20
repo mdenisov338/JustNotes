@@ -19,6 +19,7 @@
         <item name="android:windowSplashScreenBackground">@color/accent_1_200</item>
 
         <item name="actionOverflowButtonStyle">@style/Threedotsmenu</item>
+        <item name="android:windowTranslucentStatus">true</item>
 
         <item name="colorAccent">@color/accent</item>
         <item name="colorPrimary">@color/primaryColor</item>

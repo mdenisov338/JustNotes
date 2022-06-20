@@ -6,6 +6,7 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.view.animation.AnticipateInterpolator
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.animation.doOnEnd
@@ -18,7 +19,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
-class MainActivity : AppCompatActivity(), NoteClickInterface,  NoteLongClickInterface {
+class MainActivity : AppCompatActivity(), NoteClickInterface, NoteLongClickInterface {
 
     lateinit var viewModal: NoteViewModal
     lateinit var notesRV: RecyclerView
@@ -29,11 +30,7 @@ class MainActivity : AppCompatActivity(), NoteClickInterface,  NoteLongClickInte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         WindowCompat.setDecorFitsSystemWindows(window, false)
-        setSupportActionBar(findViewById(R.id.toolbar))
-        try {
-            supportActionBar!!.setDisplayShowTitleEnabled(false)
-        } catch (e: NullPointerException) {
-        }
+        setSupportActionBar(findViewById(R.id.topAppBar))
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             splashScreen.setOnExitAnimationListener { splashScreenView ->
@@ -107,5 +104,6 @@ class MainActivity : AppCompatActivity(), NoteClickInterface,  NoteLongClickInte
             }
             .show()
     }
+
 
 }

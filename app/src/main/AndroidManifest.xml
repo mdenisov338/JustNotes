@@ -26,6 +26,9 @@
             android:name=".Editor"
             android:exported="true" />
         <activity
+            android:name=".JustNotesApp"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             >
