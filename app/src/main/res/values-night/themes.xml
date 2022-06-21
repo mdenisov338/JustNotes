@@ -13,6 +13,7 @@
     <item name="colorSecondaryVariant">@color/md_theme_dark_onTertiary</item>
     <item name="colorOnSecondary">@color/md_theme_dark_onSecondary</item>
     <item name="colorSecondaryContainer">@color/md_theme_dark_onSecondary</item>
+    <item name="colorSurfaceVariant">@color/md_theme_dark_surfaceVariant</item>
 
     <item name="android:navigationBarColor">
         @android:color/transparent

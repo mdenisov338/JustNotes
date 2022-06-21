@@ -28,6 +28,7 @@
         <item name="colorSecondaryVariant">@color/md_theme_dark_onTertiary</item>
         <item name="colorOnSecondary">@color/md_theme_light_onSecondary</item>
         <item name="colorSecondaryContainer">@color/md_theme_light_secondaryContainer</item>
+        <item name="colorSurfaceVariant">@color/md_theme_light_surfaceVariant</item>
 
         <item name="android:windowLightStatusBar">true</item>
 

@@ -7,9 +7,8 @@
     android:layout_marginBottom="5dp"
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
-    app:cardBackgroundColor="?colorPrimary"
-    app:cardCornerRadius="30dp"
-    app:strokeWidth="0dp">
+    app:cardBackgroundColor="?colorSurfaceVariant"
+    app:cardCornerRadius="30dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -26,7 +25,7 @@
             android:layout_marginBottom="3dp"
             android:padding="4dp"
             android:text="Note"
-            android:textColor="@color/white"
+            android:textColor="?colorTertiaryContainer"
             android:textSize="18sp" />
 
         <TextView
@@ -37,7 +36,7 @@
             android:layout_margin="3dp"
             android:padding="4dp"
             android:text="@string/lastedit"
-            android:textColor="@color/white"
+            android:textColor="?colorTertiaryContainer"
             android:textSize="13sp" />
 
 

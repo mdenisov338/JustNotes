@@ -7,15 +7,26 @@
     tools:context=".Editor">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true">
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBar"
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            style="?attr/collapsingToolbarLayoutLargeStyle"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:title="@string/app_name" />
+            android:layout_height="?attr/collapsingToolbarLayoutMediumSize"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="0dp"
+                app:layout_collapseMode="pin"
+                app:title="@string/app_name" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -119,7 +130,7 @@
 
                     <ImageView
                         android:id="@+id/imageView"
-                        android:layout_marginTop="100dp"
+                        android:layout_marginTop="20dp"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center|bottom"
@@ -133,7 +144,7 @@
                         android:layout_marginBottom="20dp"
                         android:gravity="center"
                         android:text="@string/verison"
-                        android:textColor="?colorPrimary"
+                        android:textColor="?colorTertiaryContainer"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
