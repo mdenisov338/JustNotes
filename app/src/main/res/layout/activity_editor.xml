@@ -56,34 +56,31 @@
 
                     <Button
                         android:id="@+id/button6"
-                        android:layout_width="350dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="15dp"
                         android:layout_marginBottom="15dp"
-                        android:background="@drawable/buttons"
                         android:onClick="gh_a"
                         android:text="@string/gh"
                         android:textColor="@color/white" />
 
                     <Button
                         android:id="@+id/button7"
-                        android:layout_width="350dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="15dp"
-                        android:background="@drawable/buttons"
                         android:onClick="site_a"
                         android:text="@string/site"
                         android:textColor="@color/white" />
 
                     <Button
                         android:id="@+id/button10"
-                        android:layout_width="350dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="30dp"
-                        android:background="@drawable/buttons"
                         android:onClick="ratestore"
                         android:text="@string/rate"
                         android:textColor="@color/white" />

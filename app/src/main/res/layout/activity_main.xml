@@ -63,7 +63,7 @@
         android:backgroundTint="?colorPrimary"
         android:layout_marginRight="25dp"
         android:layout_gravity="end|bottom"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="105dp"
         app:tint="@color/white" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
