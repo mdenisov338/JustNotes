@@ -33,7 +33,7 @@
         <item name="colorSecondaryVariant">@color/colorSecondary</item>
         <item name="colorOnSecondary">@color/secondaryVariantColor</item>
         <item name="colorSecondaryContainer">@color/accent_2_50</item>
-        <item name="colorSurfaceVariant">@color/md_theme_light_surfaceVariant</item>
+        <item name="colorSurfaceVariant">@color/SurfaceVariant</item>
 
         <item name="colorOnBackground">@color/colorFabIcon</item>
 

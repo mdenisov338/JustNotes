@@ -12,7 +12,7 @@ android {
         applicationId "com.mdenisov338.justnotesapp"
         minSdk 23
         targetSdk 33
-        versionCode 45
+        versionCode 46
         versionName "2.0.4"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
