@@ -11,10 +11,10 @@
 
 JustNotes is simple notes app with some extra features, like character count and export files as .docx format. This app also supports monet engine from Android 12+.
 
-<p><img src="https://i.ibb.co/KDwWxxV/screen1.png" alt="screen1" border="0" width="240">
-<img src="https://i.ibb.co/QcQGvRF/screen2.png" alt="screen2" border="0" width="240">
-<img src="https://i.ibb.co/CVJkPv8/screen3.png" alt="screen3" border="0" width="240">
-<img src="https://i.ibb.co/CmQWpYx/screen4.png" alt="screen4" border="0" width="240"></p>
+<p><img src="https://i.ibb.co/TcGpXxQ/screen1.png" alt="screen1" border="0" width="200">
+<img src="https://i.ibb.co/VYLkxJV/screen2.png" alt="screen2" border="0" width="200">
+<img src="https://i.ibb.co/pfsbM8N/screen3.png" alt="screen3" border="0" width="200">
+<img src="https://i.ibb.co/kXnhC8v/screen4.png" alt="screen4" border="0" width="200"></p>
 
 
 ## Distribute
