@@ -9,6 +9,9 @@
             android:title="@string/option2"
             android:id="@+id/second" />
         <item
+            android:title="@string/export"
+            android:id="@+id/export" />
+        <item
             android:title="@string/option3"
             android:id="@+id/third" />
     </group>

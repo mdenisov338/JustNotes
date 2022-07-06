@@ -30,4 +30,6 @@
     <string name="pos">Ja</string>
     <string name="neg">Nein</string>
     <string name="delWarn">Möchten Sie die Notiz wirklich löschen?</string>
+    <string name="export">In .docx exportieren</string>
+    <string name="docMade">Datei wurde im Downloads-Ordner gespeichert!</string>
 </resources>

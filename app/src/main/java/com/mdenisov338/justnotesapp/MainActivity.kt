@@ -6,7 +6,6 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.view.animation.AnticipateInterpolator
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.animation.doOnEnd
@@ -31,6 +30,7 @@ class MainActivity : AppCompatActivity(), NoteClickInterface, NoteLongClickInter
         setContentView(R.layout.activity_main)
         WindowCompat.setDecorFitsSystemWindows(window, false)
         setSupportActionBar(findViewById(R.id.topAppBar))
+
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             splashScreen.setOnExitAnimationListener { splashScreenView ->
@@ -68,6 +68,7 @@ class MainActivity : AppCompatActivity(), NoteClickInterface, NoteLongClickInter
                 noteRVAdapter.updateList(it)
             }
         })
+
         addFAB.setOnClickListener {
             val intent = Intent(this@MainActivity, AddEditNoteActivity::class.java)
             startActivity(intent)
@@ -77,7 +78,6 @@ class MainActivity : AppCompatActivity(), NoteClickInterface, NoteLongClickInter
             val intent = Intent(this@MainActivity, Editor::class.java)
             startActivity(intent)
         }
-
     }
 
     override fun onNoteClick(note: Note) {
@@ -91,12 +91,9 @@ class MainActivity : AppCompatActivity(), NoteClickInterface, NoteLongClickInter
 
 
     override fun onNoteLongClick(note: Note) {
-
-
         MaterialAlertDialogBuilder(this)
             .setTitle(R.string.delWarn)
             .setNegativeButton(resources.getString(R.string.neg)) { dialog, which ->
-
             }
             .setPositiveButton(R.string.pos) { dialog, which ->
                 viewModal.deleteNote(note)

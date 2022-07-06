@@ -2,6 +2,8 @@ package com.mdenisov338.justnotesapp
 
 
 import android.os.Bundle
+import android.os.Environment
+import android.os.Environment.getExternalStoragePublicDirectory
 import android.text.Editable
 import android.view.Menu
 import android.view.MenuInflater
@@ -15,6 +17,10 @@ import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import java.text.SimpleDateFormat
 import java.util.*
+
+import org.apache.poi.xwpf.extractor.XWPFWordExtractor
+import org.apache.poi.xwpf.usermodel.*
+import java.io.*
 
 class AddEditNoteActivity : AppCompatActivity() {
 
@@ -108,6 +114,12 @@ class AddEditNoteActivity : AppCompatActivity() {
                 this.finish()
                 true
             }
+            R.id.export -> {
+                var targetDoc = createWordDoc()
+                addParagraph(targetDoc)
+                saveOurDoc(targetDoc)
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
@@ -136,4 +148,43 @@ class AddEditNoteActivity : AppCompatActivity() {
         }
         this.finish()
     }
+
+    private fun createWordDoc(): XWPFDocument {
+        return XWPFDocument()
+    }
+
+    private fun addParagraph(targetDoc:XWPFDocument){
+        val paragraph1 = targetDoc.createParagraph()
+        paragraph1.alignment = ParagraphAlignment.LEFT
+        val sentenceRun1 = paragraph1.createRun()
+        noteEdt = findViewById(R.id.idEdtNoteDesc)
+        sentenceRun1.fontSize = 16
+        sentenceRun1.fontFamily = "Times New Roman"
+        sentenceRun1.setText(noteEdt.text.toString())
+        sentenceRun1.addBreak()
+        Toast.makeText(this, R.string.docMade, Toast.LENGTH_SHORT).show()
+
+    }
+
+    private fun saveOurDoc(targetDoc:XWPFDocument){
+        val path = getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+        val ourAppFileDirectory = (path)
+        if (ourAppFileDirectory != null && !ourAppFileDirectory.exists()) {
+            ourAppFileDirectory.mkdirs()
+        }
+        val noteTitle = noteTitleEdt.text.toString()
+        val wordFile = File(ourAppFileDirectory, "$noteTitle.docx")
+        try {
+            val fileOut = FileOutputStream(wordFile)
+            targetDoc.write(fileOut)
+            fileOut.close()
+        } catch (e: FileNotFoundException) {
+            e.printStackTrace()
+        } catch (e: IOException) {
+            e.printStackTrace()
+        }
+    }
+
 }
+
+

@@ -30,5 +30,7 @@
     <string name="pos">Sí</string>
     <string name="neg">No</string>
     <string name="delWarn">¿Está seguro de que desea eliminar la nota?</string>
+    <string name="export">Exportar a .docx</string>
+    <string name="docMade">¡El archivo se guardó en la carpeta Descargas!</string>
 
 </resources>
