@@ -1,21 +1,32 @@
+<p align="center">
+      <img src="https://i.ibb.co/tC659fk/justnotesbg.png" alt="justnotesbg" border="0" width="726">
+</p>
+
+<p align="center">
+   <img src="https://img.shields.io/github/v/release/mdenisov338/JustNotes" alt="Last Version">
+   <img src="https://img.shields.io/github/license/mdenisov338/JustNotes" alt="License">
+</p>
+
+## About
+
+JustNotes is simple notes app with some extra features, like character count and export files as .docx format. This app also supports monet engine from Android 12+.
+
+<p><img src="https://i.ibb.co/KDwWxxV/screen1.png" alt="screen1" border="0" width="240">
+<img src="https://i.ibb.co/QcQGvRF/screen2.png" alt="screen2" border="0" width="240">
+<img src="https://i.ibb.co/CVJkPv8/screen3.png" alt="screen3" border="0" width="240">
+<img src="https://i.ibb.co/CmQWpYx/screen4.png" alt="screen4" border="0" width="240"></p>
 
 
-# JustNotes
+## Distribute
 
-A simple app to comfortable use note with new design. Full monet support. Click "plus" to start write, hold on card to delete note.
-
-# Fast.Simple.Light.
+- <a href="https://play.google.com/store/apps/details?id=com.mdenisov338.justnotesapp"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Google_Play_2012-2016_icon.svg/1921px-Google_Play_2012-2016_icon.svg.png" width=14 height=14 /> Download it on Google Play</a>
 
 
+## Developers
 
-![screen1 (1)](https://user-images.githubusercontent.com/53698992/170885093-a4ccd253-db05-4659-8bf5-e9e68713003a.png)
+- [jjewuz](https://github.com/mdenisov338)
 
-![screen2 (1)](https://user-images.githubusercontent.com/53698992/170885091-45939436-34a3-4cd6-852c-e5c1bb0d5568.png)
+## License
 
-![screen3 (1)](https://user-images.githubusercontent.com/53698992/170885092-d51241ab-1e13-4893-b7e5-174b5b8ce266.png)
-
-![screen4 (1)](https://user-images.githubusercontent.com/53698992/170885090-8fae8363-a86e-49cf-9338-b3157f7d7e38.png)
-
-# JustNotes
-
+- [Click here](https://github.com/mdenisov338/JustNotes/blob/master/LICENSE)
 
