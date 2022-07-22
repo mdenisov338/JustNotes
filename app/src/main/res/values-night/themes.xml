@@ -5,8 +5,8 @@
     <item name="colorPrimaryVariant">@color/md_theme_dark_onSecondaryContainer</item>
     <item name="colorOnPrimary">@color/black</item>
     <item name="colorOnBackground">@color/md_theme_light_shadow</item>
-        <item name="colorTertiary">@color/md_theme_dark_tertiary</item>
-        <item name="colorTertiaryContainer">@color/white</item>
+    <item name="colorTertiary">@color/md_theme_dark_tertiary</item>
+    <item name="colorTertiaryContainer">@color/white</item>
 
     <!-- Secondary brand color. -->
     <item name="colorSecondary">@color/md_theme_dark_primaryContainer</item>
@@ -18,17 +18,24 @@
     <item name="android:navigationBarColor">
         @android:color/transparent
     </item>
-
         <item name="android:statusBarColor">
             @android:color/transparent
         </item>
 
         <item name="actionOverflowButtonStyle">@style/Threedotsmenu</item>
-        <item name="android:windowTranslucentStatus">true</item>
+
+        <item name="colorOnContainer">@color/black</item>
+        <item name="colorSurface">@color/md_theme_dark_secondaryContainer</item>
+        <item name="colorPrimaryContainer">@color/md_theme_dark_onPrimary</item>
+        <item name="colorControlNormal">@android:color/black</item>
 
    </style>
 
     <style name="Threedotsmenu" parent="Widget.AppCompat.Light.ActionButton.Overflow">
-        <item name="tint">#FFFFFF</item>
+        <item name="tint">@color/white</item>
+    </style>
+
+    <style name="Toolbar" parent="AppTheme">
+        <item name="tint">@android:color/white</item>
     </style>
 </resources>

@@ -15,12 +15,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import org.apache.poi.xwpf.usermodel.ParagraphAlignment
+import org.apache.poi.xwpf.usermodel.XWPFDocument
+import java.io.File
+import java.io.FileNotFoundException
+import java.io.FileOutputStream
+import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
-
-import org.apache.poi.xwpf.extractor.XWPFWordExtractor
-import org.apache.poi.xwpf.usermodel.*
-import java.io.*
 
 class AddEditNoteActivity : AppCompatActivity() {
 
@@ -89,31 +91,6 @@ class AddEditNoteActivity : AppCompatActivity() {
 
                 true
             }
-            R.id.third -> {
-                val noteType = intent.getStringExtra("noteType")
-
-                val noteTitle = noteTitleEdt.text.toString()
-                val noteDescription = noteEdt.text.toString()
-                if (noteType.equals("Edit")) {
-                    if (noteTitle.isNotEmpty()) {
-                        val sdf = SimpleDateFormat("dd MMM, yyyy - HH:mm")
-                        val currentDateAndTime: String = sdf.format(Date())
-                        val updatedNote = Note(noteTitle, noteDescription, currentDateAndTime)
-                        updatedNote.id = noteID
-                        viewModal.updateNote(updatedNote)
-                        Toast.makeText(this, R.string.saved, Toast.LENGTH_LONG).show()
-                    }
-                } else {
-                    if (noteTitle.isNotEmpty()) {
-                        val sdf = SimpleDateFormat("dd MMM, yyyy - HH:mm")
-                        val currentDateAndTime: String = sdf.format(Date())
-                        viewModal.addNote(Note(noteTitle, noteDescription, currentDateAndTime))
-                        Toast.makeText(this, R.string.saved, Toast.LENGTH_LONG).show()
-                    }
-                }
-                this.finish()
-                true
-            }
             R.id.export -> {
                 var targetDoc = createWordDoc()
                 addParagraph(targetDoc)
@@ -167,22 +144,48 @@ class AddEditNoteActivity : AppCompatActivity() {
     }
 
     private fun saveOurDoc(targetDoc:XWPFDocument){
-        val path = getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-        val ourAppFileDirectory = (path)
-        if (ourAppFileDirectory != null && !ourAppFileDirectory.exists()) {
-            ourAppFileDirectory.mkdirs()
-        }
+            val path = getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+            val ourAppFileDirectory = (path)
+            if (ourAppFileDirectory != null && !ourAppFileDirectory.exists()) {
+                ourAppFileDirectory.mkdirs()
+            }
+            val noteTitle = noteTitleEdt.text.toString()
+            val wordFile = File(ourAppFileDirectory, "$noteTitle.docx")
+            try {
+                val fileOut = FileOutputStream(wordFile)
+                targetDoc.write(fileOut)
+                fileOut.close()
+            } catch (e: FileNotFoundException) {
+                e.printStackTrace()
+            } catch (e: IOException) {
+                e.printStackTrace()
+            }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        val noteType = intent.getStringExtra("noteType")
+
         val noteTitle = noteTitleEdt.text.toString()
-        val wordFile = File(ourAppFileDirectory, "$noteTitle.docx")
-        try {
-            val fileOut = FileOutputStream(wordFile)
-            targetDoc.write(fileOut)
-            fileOut.close()
-        } catch (e: FileNotFoundException) {
-            e.printStackTrace()
-        } catch (e: IOException) {
-            e.printStackTrace()
+        val noteDescription = noteEdt.text.toString()
+        if (noteType.equals("Edit")) {
+            if (noteTitle.isNotEmpty()) {
+                val sdf = SimpleDateFormat("dd MMM, yyyy - HH:mm")
+                val currentDateAndTime: String = sdf.format(Date())
+                val updatedNote = Note(noteTitle, noteDescription, currentDateAndTime)
+                updatedNote.id = noteID
+                viewModal.updateNote(updatedNote)
+                Toast.makeText(this, R.string.saved, Toast.LENGTH_SHORT).show()
+            }
+        } else {
+            if (noteTitle.isNotEmpty()) {
+                val sdf = SimpleDateFormat("dd MMM, yyyy - HH:mm")
+                val currentDateAndTime: String = sdf.format(Date())
+                viewModal.addNote(Note(noteTitle, noteDescription, currentDateAndTime))
+                Toast.makeText(this, R.string.saved, Toast.LENGTH_SHORT).show()
+            }
         }
+        this.finish()
+        return false
     }
 
 }

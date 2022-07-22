@@ -17,7 +17,8 @@
         <item name="colorOnSecondary">@color/secondaryVariantColor</item>
         <item name="colorSecondaryContainer">@color/accent_2_800</item>
         <item name="colorSurfaceVariant">@color/accent_1_700</item>
-
+        <item name="colorSurface">@color/accent_1_700</item>
+        <item name="colorPrimaryContainer">@color/accent_1_900</item>
         <item name="colorOnBackground">@color/colorFabIcon</item>
 
         <item name="colorOnContainer">@color/accent_1_1000</item>
@@ -28,19 +29,23 @@
 
 
         <item name="android:statusBarColor">
-            @color/accent_1_400
+            @android:color/transparent
         </item>
 
         <item name="android:windowSplashScreenAnimationDuration">3000</item>
         <item name="android:windowSplashScreenBackground">@color/primaryColor</item>
-
-        <item name="actionOverflowButtonStyle">@style/Threedotsmenu</item>
-        <item name="android:windowTranslucentStatus">true</item>
-
+        <item name="colorControlNormal">@android:color/white</item>
     </style>
 
 
     <style name="Threedotsmenu" parent="Widget.AppCompat.Light.ActionButton.Overflow">
-        <item name="tint">#FFFFFF</item>
+        <item name="tint">?colorTertiaryContainer</item>
+
     </style>
+
+    <style name="Toolbar" parent="AppTheme">
+        <item name="tint">@android:color/white</item>
+    </style>
+
+
 </resources>
